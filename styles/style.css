@@ -1,0 +1,588 @@
+/* -----------------RESET---------------------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --primary-color: dodgerblue;
+    --bg-color: rgb(248, 245, 241);
+    --text-color: rgb(51, 50, 50);
+    --secondary-color: rgb(41, 41, 44);
+}
+
+.active{
+    color: var(--primary-color);
+}
+/* ---------------HOME PAGE------------------- */
+
+.main.wrapper{
+    margin: 0em 2em 2em 2em;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--secondary-color);
+    color: white;
+    justify-items: center;
+    padding: 1.2em;
+}
+
+nav ul{
+    list-style-type: none;
+    color: white;
+    display: flex;
+    gap: 5rem;
+}
+
+nav ul a{
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+nav ul a:hover{
+    color: var(--primary-color) ;
+}
+
+.logo{
+    color: var(--primary-color);
+}
+
+.logo:hover{
+    color: white;
+}
+
+.add-on a{
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.main-intro-wrapper{
+    display: flex;
+    gap: 3em;
+    margin-top: 3%;
+    justify-content: center;
+    align-items: center;
+}
+
+.attention-service{
+    color: var(--primary-color);
+}
+
+p{font-size: 1.2em;}
+
+.cta-btn{
+    align-items: center;
+    justify-content: center;
+    width: 30em;
+    height: 2.5em;
+    border-radius: 50px;
+    margin-top: 3em;
+    font-size: 1.2em;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    transition: background-color 1s, color 1s ;
+}
+
+.cta-btn:hover{
+    background-color: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.intro-image{
+    width: 100%;
+    height: auto;
+    max-width: 30rem;
+    border-radius: 10px;
+}
+
+.intro-image:hover{
+    box-shadow: 1px 1px 25px rgba(162, 162, 162, 0.13);
+    transform: scale(1);
+}
+
+@media (max-width:720) {
+    .main.wrapper {
+            margin: 0em 3em 3em 3em;
+        }
+    
+    
+        .logo {
+            font-size: 1.2em;
+            color: var(--primary-color);
+        }
+    
+        nav ul {
+            display: block;
+            gap: 5rem;
+        }
+    
+        .add-on a {
+            font-size: 0.5em;
+        }
+    
+    
+        .main-intro-wrapper {
+            display: block;
+            margin-top: 3%;
+            justify-content: center;
+        }
+    
+        .intro-heading {
+            font-size: 2em;
+        }
+    
+    
+        .cta-btn {
+            width: 20em;
+            height: 2.1em;
+            margin-top: 3em;
+            font-size: 1em;
+        }
+}
+
+@media (max-width: 320px) {
+    .main.wrapper {
+        margin: 0em 3em 3em 3em;
+    }
+
+
+    .logo {
+        display: none;
+        color: var(--primary-color);
+    }
+
+    nav ul {
+        display: block;
+        gap: 5rem;
+    }
+
+    .add-on a {
+        font-size: 0.5em;
+    }
+
+
+    .main-intro-wrapper {
+        display: block;
+        margin-top: 3%;
+        justify-content: center;  
+    }
+
+    .intro-heading{
+        font-size: 1.9em;
+    }
+
+
+    .cta-btn {
+        width: 20em;
+        height: 2.1em;
+        margin-top: 3em;
+        font-size: 1em;
+    }
+
+}
+
+
+
+
+
+/*----------------ABOUT PAGE-------------------*/
+.trusted-by-container {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+   
+}
+
+.trusted-by-track {
+    display: flex;
+    align-items: center;
+    animation: scroll-left 30s linear infinite;
+}
+
+.trusted-by-track i {
+    margin: 0 25px;
+    color: #555;
+    flex-shrink: 0;
+}
+
+/* Optional: Pause animation on hover */
+.trusted-by-container:hover .trusted-by-track {
+    animation-play-state: paused;
+}
+
+/* The Animation */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+        /* Start position */
+    }
+
+    100% {
+        /*
+         * Move the track to the left by the width of ONE set of icons.
+         * Since the track contains TWO sets, this means moving it 50% of its TOTAL width.
+         * When it reaches -50%, the second set of icons is perfectly aligned
+         * where the first set started, creating a seamless loop.
+         */
+        transform: translateX(-50%);
+    }
+}
+
+
+.developer-container{
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    margin: 3em;
+}
+
+.member-card{
+   background-color: white;
+   border-radius: 10px;
+   padding: 2em;
+   box-shadow: 1px 1px 25px rgba(128, 128, 128, 0.153);
+}
+
+.developer-image{
+    width: 100%;
+    height: auto;
+    max-width: 20em;
+    border-radius: 10px;
+    transition: transform 1s ;
+}
+
+img:hover{
+    transform: scale(1.09);
+}
+
+.about-btn{
+    height: 2em;
+    border-radius: 10px;
+    width: 10em;
+    margin-top: 1em;
+    font-size: medium;
+    border: none;
+    color: white;
+    background-color: var(--primary-color);
+    transition: color 1s background-color 1s;
+}
+
+.about-btn:hover{
+    color: var(--primary-color);
+    background-color: white;
+    border: 1px solid var(--primary-color);
+}
+
+.mission-section,
+.vision-section,
+.lorem-section{
+    text-align: center;
+    margin: 10% 0% 0% 0%;
+}
+
+.vision-section,
+.lorem-section{
+    margin: 10% 0% 10% 0%;
+}
+
+
+
+
+
+/* --------------CONTACT PAGE------------------- */
+.contact-return-link{
+    font-size: 0.5em;
+    text-decoration: none;
+}
+
+.contact-return-link:hover{
+    color: var(--primary-color);
+}
+
+.contact-wrapper{
+    margin: 0em 2em 0em 2em;
+}
+
+form{
+    padding: 2em;
+    background-color: white;
+    border: 1px solid gray;
+    justify-content: center;
+    margin: auto;
+    margin-top: 2%;
+    max-width: 35em;
+    height: auto;
+}
+
+input{
+    width: 100%;
+    min-height: 2em;
+    margin-bottom: 2em;
+    border: 1px solid --text-color;
+    padding: 2px;
+    font-size: 15px;
+}
+
+textarea{
+    width: 100%;
+    min-height: 6em;
+    padding: 2px;
+    font-size: 15px;
+    max-width: 100%;
+}
+
+label{
+    font-size: 2em;
+}
+
+.icons-container{
+    margin-top: 2em;
+    justify-content: center;
+    text-align: center;
+}
+
+.icons{
+    margin-top: 1em;
+}
+
+h2{
+    text-align: center;
+    font-size: 2em;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 3em;
+}
+
+i{
+    padding: 0em 1em 0em 1em;
+    color: black;
+}
+
+i:hover{
+    color: var(--primary-color);
+    transform: scale(1.4);
+}
+
+@media (min-width:320px) {
+    i {
+        padding: 1em 1em 0em 1em;
+    }   
+}
+
+
+/*------------- footer----------------- */
+footer{
+    color: white;
+    background-color: var(--secondary-color);
+    padding-bottom: 2em;
+}
+
+.social-media-icons{
+    color: aliceblue;
+}
+
+
+/* ----------------- MEDIA QUERIES ---------------------- */
+
+/* For tablets and smaller desktops */
+@media (max-width: 992px) {
+    nav ul {
+        gap: 3rem;
+    }
+
+    nav ul a {
+        font-size: 1.8em;
+    }
+
+    .main-intro-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-image {
+        margin-top: 2em;
+    }
+
+    .cta-btn {
+        width: 80%;
+        max-width: 25em;
+        /* Max width for CTA button */
+    }
+
+    /* Trusted By scroller adjustments */
+    .trusted-by-track i {
+        font-size: 4em !important;
+        margin: 0 20px;
+    }
+
+    .trusted-by-container {
+        padding: 15px 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    nav ul a {
+        font-size: 1.5em;
+    }
+
+    .add-on {
+        margin-top: 1em;
+       
+    }
+
+    .developer-container {
+        gap: 1.5em;
+        display: flex;
+    
+        flex-wrap: wrap;
+    }
+
+    .member-card {
+        width: 45%;
+        min-width: 280px;
+    }
+}
+
+
+@media (max-width: 720px) {
+
+    /* Your existing breakpoint */
+    .main.wrapper {
+        margin: 0em 1em 1em 1em;
+        /* Reduce side margins */
+    }
+
+    .intro-heading {
+        font-size: 1.8em;
+        /* Adjust heading size */
+    }
+
+    .cta-btn {
+        width: 90%;
+        font-size: 1.1em;
+    }
+
+    /* Trusted By scroller adjustments */
+    .trusted-by-container {
+        width: 90%;
+    }
+
+    .trusted-by-track i {
+        font-size: 3.5em !important;
+        margin: 0 15px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    /* For smaller phones */
+    nav ul a {
+        font-size: 1.3em;
+    }
+
+    .logo {
+        font-size: 2em;
+    }
+
+    .intro-heading {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .cta-btn {
+        font-size: 1em;
+        height: 3em;
+        /* Adjust height if text wraps */
+    }
+
+    .member-card {
+        width: 80%;
+        /* One card per row */
+    }
+
+    label {
+        font-size: 1.2em;
+    }
+
+    input,
+    textarea {
+        font-size: 0.9em;
+    }
+
+
+    /* Trusted By scroller adjustments */
+    .trusted-by-container {
+        width: 95%;
+        /* Almost full width */
+        padding: 10px 0;
+    }
+
+    .trusted-by-track i {
+        font-size: 3em !important;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .logo {
+        display: block;
+       
+        font-size: 1.8em;
+    }
+
+    nav ul {
+       
+    }
+
+    .intro-heading {
+        font-size: 1.3em;
+    }
+
+    .cta-btn {
+        width: 100%;
+        font-size: 0.9em;
+    }
+
+    /* Trusted By scroller adjustments for very narrow screens */
+    .trusted-by-track i {
+        font-size: 2.5em !important;
+        margin: 0 8px;
+    }
+}
